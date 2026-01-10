@@ -14,9 +14,13 @@
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.1",
     "astro": "^5.16.8",
+    "mermaid": "^11.12.2",
+    "astro-mermaid": "^1.2.0",
     "sharp": "^0.34.3"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18",
     "wrangler": "^4.58.0"
   }
 }
