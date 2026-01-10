@@ -8,7 +8,9 @@ import astroMermaid from 'astro-mermaid';
 export default defineConfig({
   site: 'https://luchador.dev',
   integrations: [mdx(), sitemap(), astroMermaid()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'compile',
+  }),
   vite: {
     plugins: [tailwindcss()],
   },
