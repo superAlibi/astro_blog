@@ -1,4 +1,7 @@
 ---
+title: 'Gradle 初体验'
+description: 'Gradle 是现代程序工程不可或缺的构建工具，支持 Java、Kotlin、Android 等多种编程语言的构建'
+pubDate: '2024-01-01'
 outline: [2,3]
 ---
 

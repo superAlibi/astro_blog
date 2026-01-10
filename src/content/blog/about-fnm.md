@@ -1,3 +1,8 @@
+---
+title: '关于 FNM'
+description: 'Fast Node Manager (FNM) 是一个用于管理 Node.js 版本的工具，用 Rust 编写，轻量级且高效'
+pubDate: '2024-01-01'
+---
 # 关于 FNM
 
 FNM 是 [Fast Node Manager](https://github.com/Schniz/fnm) 的缩写，是一个用于管理 Node.js 版本的工具，它可以帮助你快速切换和管理 Node.js 版本，而不需要手动下载和安装。

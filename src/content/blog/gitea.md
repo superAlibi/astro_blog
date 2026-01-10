@@ -1,4 +1,7 @@
 ---
+title: '关于 Gitea 二三事'
+description: '轻量化的 Git 仓库管理工具 Gitea，相比 GitLab 占用资源更小，能直接利用 GitHub 的 CI/CD 资源'
+pubDate: '2024-01-01'
 outline: [2,3]
 ---
 # 关于 Gitea 二三事

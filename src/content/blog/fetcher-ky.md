@@ -1,4 +1,7 @@
 ---
+title: 'Ky 浅谈'
+description: 'Ky 是一个零依赖、底层基于现代 API Fetch 的轻量级 HTTP 请求工具，用于替代 Axios'
+pubDate: '2024-01-01'
 outline: [2,3]
 ---
 

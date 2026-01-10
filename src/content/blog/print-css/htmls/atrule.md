@@ -1,4 +1,8 @@
-
+---
+title: 'CSS @page 规则示例'
+description: 'CSS @page 规则和页面方向设置的 HTML 示例代码'
+pubDate: '2024-01-01'
+---
 ```html
 <body>
   <fieldset id="printStyle">

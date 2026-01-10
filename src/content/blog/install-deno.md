@@ -1,4 +1,7 @@
 ---
+title: '使用 Cargo 安装 Deno'
+description: '通过 Rust 的 Cargo 工具安装 Deno，包括在 Debian 和 Redhat 发行版上的安装步骤和常见问题解决'
+pubDate: '2024-01-01'
 layout: doc
 outline:
   level: 2

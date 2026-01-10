@@ -1,4 +1,7 @@
 ---
+title: 'Stream 与音频播放技术'
+description: '使用异步请求加载流式数据，实现边加载边播放的功能，涉及 Stream API、Fetch API 和 Media Source Extensions API'
+pubDate: '2024-01-01'
 outline: [2,4]
 ---
 

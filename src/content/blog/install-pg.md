@@ -1,3 +1,8 @@
+---
+title: '安装 PostgreSQL'
+description: '在 Linux 上安装和配置 PostgreSQL 数据库，包括 Fedora 发行版的安装步骤和配置说明'
+pubDate: '2024-01-01'
+---
 # 安装postgresql
 
 我最开始比较认可postgresql是因为它比mysql更符合ANSI SQL,仅此而已.不过因为其强大和灵活的配置和插件系统,导致其配置文件相当复杂.且默认配置一点也不合理,兴许他们就是要这样强制使用者去了解他们呢?

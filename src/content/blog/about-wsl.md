@@ -1,3 +1,8 @@
+---
+title: 'Windows Subsystem for Linux (WSL)'
+description: 'WSL 成为我开发过程中不可或缺的一部分，本文介绍 WSL 的安装、配置和使用经验'
+pubDate: '2024-01-01'
+---
 # Windows Subsystem for Linux (WSL)
 
 我所工作过的公司大部分开发者都是使用 Windows，仅仅遇到过两个不用 Windows 开发的，一个使用 Arch Linux 的衍生版，一个使用 Mac 小主机 :)
