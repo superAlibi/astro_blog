@@ -29,3 +29,35 @@
 ## 可选
 
 - [Astro 博客](https://astro.build/blog/)：关于 Astro 开发的最新消息
+
+## 代码生成规范
+
+### Tailwind CSS 语法要求
+
+在生成代码时，**必须使用 Tailwind CSS 4 的语法**，不推荐使用 Tailwind CSS 3 的语法。
+
+**主要语法差异：**
+
+1. **渐变背景语法**：
+   - ❌ Tailwind CSS 3: `bg-gradient-to-br`, `bg-gradient-to-r`, `bg-gradient-to-l` 等
+   - ✅ Tailwind CSS 4: `bg-linear-to-br`, `bg-linear-to-r`, `bg-linear-to-l` 等
+
+2. **样式组织**：
+   - ✅ 使用 `@layer utilities` 包裹自定义样式和动画
+   - ✅ 使用 `@import 'tailwindcss'` 导入 Tailwind CSS
+
+3. **示例**：
+   ```html
+   <!-- ✅ 正确 - Tailwind CSS 4 -->
+   <div class="bg-linear-to-br from-blue-500 to-purple-600">
+   ```
+   
+   错误示例（不要使用）：
+   - `bg-gradient-to-br` (Tailwind CSS 3 语法)
+   - `bg-gradient-to-r` (Tailwind CSS 3 语法)
+   - `bg-gradient-to-l` (Tailwind CSS 3 语法)
+
+**注意事项：**
+- 所有渐变相关的类名都需要使用 `bg-linear-to-*` 而不是 `bg-gradient-to-*`
+- 自定义动画和样式应放在 `@layer utilities` 中
+- 确保代码通过 Tailwind CSS 4 的 lint 检查
