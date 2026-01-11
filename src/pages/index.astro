@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
@@ -13,36 +13,148 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div
+				class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 px-4"
+			>
+				<div class="max-w-2xl w-full text-center">
+					<!-- 动画图标 -->
+					<div class="mb-8 flex justify-center">
+						<div class="relative">
+							<div
+								class="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl animate-pulse"
+							>
+								<svg
+									class="w-16 h-16 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+									></path>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+									></path>
+								</svg>
+							</div>
+							<!-- 装饰性圆圈 -->
+							<div
+								class="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"
+							>
+							</div>
+							<div
+								class="absolute -bottom-2 -left-2 w-6 h-6 bg-pink-400 rounded-full animate-bounce"
+								style="animation-delay: 0.2s;"
+							>
+							</div>
+						</div>
+					</div>
+
+					<!-- 标题 -->
+					<h1
+						class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in"
+					>
+						正在装修中
+					</h1>
+
+					<!-- 副标题 -->
+					<div class="mb-8">
+						<p
+							class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2"
+						>
+							我们正在努力改进网站
+						</p>
+						<p class="text-lg text-gray-500 dark:text-gray-400">
+							为您带来更好的体验
+						</p>
+					</div>
+
+					<!-- 进度条 -->
+					<div class="mb-8 max-w-md mx-auto">
+						<div
+							class="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2"
+						>
+							<span>装修进度</span>
+							<span class="font-semibold">75%</span>
+						</div>
+						<div
+							class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden"
+						>
+							<div
+								class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-3 rounded-full animate-progress"
+								style="width: 75%;"
+							>
+							</div>
+						</div>
+					</div>
+
+					<!-- 装饰性元素 -->
+					<div class="flex justify-center space-x-2 mb-8">
+						<div
+							class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+						>
+						</div>
+						<div
+							class="w-2 h-2 bg-purple-500 rounded-full animate-bounce"
+							style="animation-delay: 0.1s;"
+						>
+						</div>
+						<div
+							class="w-2 h-2 bg-pink-500 rounded-full animate-bounce"
+							style="animation-delay: 0.2s;"
+						>
+						</div>
+					</div>
+
+					<!-- 提示信息 -->
+					<div
+						class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-md mx-auto"
+					>
+						<p class="text-gray-700 dark:text-gray-300 mb-4">
+							🚧 网站正在维护升级中，预计很快就能与您见面！
+						</p>
+						<p class="text-sm text-gray-500 dark:text-gray-400">
+							如有紧急事务，请通过其他方式联系我们
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<style>
+				@keyframes fade-in {
+					from {
+						opacity: 0;
+						transform: translateY(-20px);
+					}
+					to {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+
+				@keyframes progress {
+					from {
+						width: 0%;
+					}
+					to {
+						width: 75%;
+					}
+				}
+
+				.animate-fade-in {
+					animation: fade-in 1s ease-out;
+				}
+
+				.animate-progress {
+					animation: progress 2s ease-out;
+				}
+			</style>
 		</main>
 		<Footer />
 	</body>
