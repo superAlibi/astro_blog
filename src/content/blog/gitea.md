@@ -515,7 +515,7 @@ sudo act_runner register --no-interactive --instance <instance_url> --token <reg
 还记得 [生成配置文件](#configgen) 部分的内容吗? 
 此处将修改runner部分的内容. 以 `保证 act-runner 能正确获得 .runner 的运行配置内容`
 
-```yaml{8}
+```yaml
 # .............前文忽略 
 log:
   # The level of logging, can be trace, debug, info, warn, error, fatal
@@ -531,7 +531,7 @@ runner:
 
 找到高高亮处信息, 并修改为如下内容
 
-```yaml{8}
+```yaml
 # .............前文忽略 
 log:
   # The level of logging, can be trace, debug, info, warn, error, fatal

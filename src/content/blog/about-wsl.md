@@ -199,11 +199,11 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 fnm 的 [GitHub 仓库](https://github.com/Schniz/fnm) 有详细的说明。再通过 Cargo 安装 fnm 需要提前安装 cmake 开发工具集，否则将出现编译失败的错误。
 
-当然我也在[博客](/blogs/about-fnm) 中介绍过 fnm，其作为本人必备的 Node.js 管理工具。
+当然我也在[博客](/blog/about-fnm) 中介绍过 fnm，其作为本人必备的 Node.js 管理工具。
 
 ### 通过 Cargo 安装 Deno
 
-我在[使用 Cargo 安装 Deno](/blogs/install-deno) 中详细描述了安装构成，本文不再赘述。
+我在[使用 Cargo 安装 Deno](/blog/install-deno) 中详细描述了安装构成，本文不再赘述。
 Deno 使用 Rust 构建，内置 TypeScript 支持，能直接运行 TS 程序，无需编译，且尽量往浏览器原生 API 靠拢（后证明此行为导致开发者混淆浏览器或服务器的宿主环境，导致部分 API 向 Node.js 靠拢了 QAQ）。
 
 ### 启用镜像网络

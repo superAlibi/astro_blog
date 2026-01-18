@@ -185,7 +185,7 @@ host    replication     all             ::1/128                 ident
 以上表格中各列的详细描述,我这里暂时不做介绍,如果需要请自行[查看](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html).
 
 这里我仅介绍如何允许一般情况下,允许远程访问方式为数据库用户账号和数据库用户账号密码登录,则按照如下配置调整
-```text{7,10}
+```text
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
 # "local" is for Unix domain socket connections only
@@ -207,7 +207,7 @@ host    replication     all             ::1/128                 ident
 
 一些配置参数通过命令行传递给守护进程选项。此行为可能会覆盖 `postgresql.conf` 中的设置。例如，如果要将服务器的端口号更改为 5433，请在 /etc/systemd/system/postgresql.service 文件中修改下内容(部分)
 
-```text{3}
+```text
 .include /lib/systemd/system/postgresql.service
 [Service]
 Environment=PGPORT=5433

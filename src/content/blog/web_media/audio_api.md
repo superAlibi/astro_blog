@@ -56,7 +56,7 @@ Web 媒体技术涉及诸多概念，本文主旨在于介绍以下场景：
 
 
 
-本文内容可[访问案例](https://remix.lucardo.website/blogs/mse)预览运行效果
+本文内容可[访问案例](https://remix.luchador.dev/blogs/mse)预览运行效果
 
 ## 一、技术需求级别
 
@@ -145,7 +145,7 @@ mediaSource.addEventListener("sourceopen", async () => {
 
 #### 3. 创建缓冲区
 
-```typescript{2,11}
+```typescript
 // 音频流缓冲对象
 let sourceBuffer: SourceBuffer | undefined;
 mediaSource.addEventListener("sourceopen", async () => {

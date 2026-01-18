@@ -1,43 +1,12 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-@import 'tailwindcss';
-@plugin "@tailwindcss/typography";
+/* Load Starwind core first so our tokens can override its CSS variables */
+@import "./starwind.css";
+/* Design tokens and theme overrides */
+@import "./tokens.css";
+@import "./themes/dark.css";
+@import "./themes/light.css";
+/* Project-specific utilities */
+@import "./utilities.css";
 
-:root {
-	/* 使用 light-dark() 函数定义颜色变量 */
-	--accent: light-dark(#2337ff, #4a5eff);
-	--accent-dark: light-dark(#000d8a, #2337ff);
-
-	/* RGB 值使用 light-dark() 返回完整的 RGB 颜色 */
-	--black-rgb: light-dark(rgb(15, 18, 25), rgb(255, 255, 255));
-	--gray-rgb: light-dark(rgb(96, 115, 159), rgb(156, 163, 175));
-	--gray-light-rgb: light-dark(rgb(229, 233, 240), rgb(55, 65, 81));
-	--gray-dark-rgb: light-dark(rgb(34, 41, 57), rgb(209, 213, 219));
-
-	/* 背景和文字颜色 */
-	--bg-color-rgb: light-dark(rgb(255, 255, 255), rgb(17, 24, 39));
-	--text-color-rgb: var(--black-rgb);
-	--text-muted-rgb: var(--gray-rgb);
-
-	/* 渐变和阴影 */
-	--gray-gradient: light-dark(rgba(229, 233, 240, 0.5) 50%, #fff,
-			rgba(55, 65, 81, 0.5) 50%, rgb(17, 24, 39));
-	--box-shadow: light-dark(0 2px 6px rgba(96, 115, 159, 0.25), 0 8px 24px rgba(96, 115, 159, 0.33), 0 16px 32px rgba(96, 115, 159, 0.33),
-			0 2px 6px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4), 0 16px 32px rgba(0, 0, 0, 0.4));
-
-	/* 设置 color-scheme，让浏览器自动处理某些 UI 元素 */
-	color-scheme: light dark;
-}
-
-/* 基础样式 */
-body {
-	background-color: var(--bg-color-rgb);
-	color: var(--text-color-rgb);
-	transition: background-color 0.2s ease, color 0.2s ease;
-}
 
 @font-face {
 	font-family: "Atkinson";
@@ -46,7 +15,6 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
-
 @font-face {
 	font-family: "Atkinson";
 	src: url("/fonts/atkinson-bold.woff") format("woff");
@@ -54,139 +22,115 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
-
-:root {
+body {
 	font-family: "Atkinson", sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+    background: var(--color-bg-primary);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+    color: var(--color-text-secondary);
+	font-size: 20px;
+	line-height: 1.7;
 }
-
-/* Tailwind Typography prose 样式在暗色模式下的支持 */
-/* 使用更高的特异性确保覆盖 Tailwind Typography 的默认样式 */
-.prose,
-.prose-stone {
-	color: var(--text-color-rgb) !important;
+/* Default main layout for legacy pages.
+   Pages that manage layout with utility classes should add class `use-utility-layout` to <main> to opt out. */
+main:not(.use-utility-layout) {
+    width: 1280px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 3em 1em;
 }
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6,
-.prose-stone h1,
-.prose-stone h2,
-.prose-stone h3,
-.prose-stone h4,
-.prose-stone h5,
-.prose-stone h6 {
-	color: var(--text-color-rgb) !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: rgb(var(--black));
+	line-height: 1.2;
 }
-
-.prose p,
-.prose-stone p {
-	color: var(--text-color-rgb) !important;
+h1 {
+    font-size: 2.75em;
 }
-
-.prose strong,
-.prose-stone strong {
-	color: var(--text-color-rgb) !important;
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.4em;
+}
+h5 {
+    font-size: 1.125em;
+}
+strong,
+b {
 	font-weight: 700;
 }
-
-.prose em,
-.prose-stone em {
-	color: var(--text-color-rgb) !important;
+a:not(.sw-btn):not(.sw-btn-sm):not(.no-underline) {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
-
-.prose a,
-.prose-stone a {
-	color: var(--accent) !important;
+a:not(.sw-btn):not(.sw-btn-sm):not(.no-underline):hover {
+    color: var(--accent);
+    text-decoration-thickness: 2px;
 }
-
-.prose a:hover,
-.prose-stone a:hover {
-	color: var(--accent-dark) !important;
+p {
+	margin-bottom: 1em;
 }
-
-.prose code,
-.prose-stone code {
-	color: var(--text-color-rgb) !important;
-	background-color: light-dark(rgba(229, 233, 240, 0.5),
-			rgba(55, 65, 81, 0.5)) !important;
-	padding: 0.125rem 0.25rem;
-	border-radius: 0.25rem;
-	font-size: 0.875em;
+.prose p {
+	margin-bottom: 1em;
 }
-
-.prose pre,
-.prose-stone pre {
-	background-color: light-dark(rgb(249, 250, 251),
-			rgb(31, 41, 55)) !important;
-	color: var(--text-color-rgb) !important;
-	border-radius: 0.5rem;
-	padding: 1rem;
-	overflow-x: auto;
+textarea {
+	width: 100%;
+	font-size: 16px;
 }
-
-.prose pre code,
-.prose-stone pre code {
-	background-color: transparent !important;
-	padding: 0;
-	color: inherit !important;
+input {
+	font-size: 16px;
 }
-
-.prose blockquote,
-.prose-stone blockquote {
-	border-left-color: var(--accent) !important;
-	color: var(--text-muted-rgb) !important;
+table {
+	width: 100%;
 }
-
-.prose ul,
-.prose ol,
-.prose-stone ul,
-.prose-stone ol {
-	color: var(--text-color-rgb) !important;
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
 }
-
-.prose li,
-.prose-stone li {
-	color: var(--text-color-rgb) !important;
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
 }
-
-.prose hr,
-.prose-stone hr {
-	border-color: light-dark(rgba(229, 233, 240, 0.5),
-			rgba(55, 65, 81, 0.5)) !important;
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
 }
-
-.prose table,
-.prose-stone table {
-	color: var(--text-color-rgb) !important;
+pre > code {
+	all: unset;
 }
-
-.prose thead,
-.prose-stone thead {
-	border-bottom-color: light-dark(rgba(229, 233, 240, 0.5),
-			rgba(55, 65, 81, 0.5)) !important;
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
 }
-
-.prose th,
-.prose-stone th {
-	color: var(--text-color-rgb) !important;
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
 }
-
-.prose td,
-.prose-stone td {
-	border-color: light-dark(rgba(229, 233, 240, 0.5),
-			rgba(55, 65, 81, 0.5)) !important;
-	color: var(--text-color-rgb) !important;
+@media (max-width: 720px) {
+	body {
+		font-size: 18px;
+	}
+	main {
+		padding: 1em;
+	}
 }
-
-.prose img,
-.prose-stone img {
-	border-radius: 0.5rem;
-}
-
-
 
 .sr-only {
 	border: 0;
