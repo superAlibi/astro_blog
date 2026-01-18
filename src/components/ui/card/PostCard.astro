@@ -36,13 +36,13 @@ try {
   </h3>
   <p class="text-[color:var(--color-text-muted)]">{post.data.description}</p>
   <div class="flex flex-col text-sm text-[color:var(--color-text-muted)] gap-1">
-    <div class="flex items-center gap-1">
+    <!-- <div class="flex items-center gap-1">
       <a
         href={`/blog/author/${slugify(post.data.author || "Site Author")}/`}
         class="hover:text-[color:var(--accent)] interactive-link"
         >{post.data.author || "Site Author"}</a
       >
-    </div>
+    </div> -->
     <div class="flex items-center gap-1">
       <FormattedDate date={post.data.pubDate} />
     </div>
@@ -63,7 +63,7 @@ try {
             <circle cx="12" cy="12" r="9" />
             <path d="M12 7v5l3 3" />
           </svg>
-          {readingTimeMin} 分钟
+          阅读需要 {readingTimeMin} 分钟
         </div>
       )
     }

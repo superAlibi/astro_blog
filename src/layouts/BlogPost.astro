@@ -205,12 +205,12 @@ const {
 							</div>
 						)
 					}
-					<ShareButtons title={title} url={Astro.url.toString()} />
-					<PostMeta
+					<!-- <ShareButtons title={title} url={Astro.url.toString()} /> -->
+					<!-- <PostMeta
 						pubDate={pubDate}
 						readingTimeMin={readingTimeMin}
 						authorName={Astro.props.author || "Site Author"}
-					/>
+					/> -->
 					<slot />
 					<PostNav prev={prevPost} next={nextPost} />
 				</div>
