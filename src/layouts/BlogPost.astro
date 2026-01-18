@@ -30,7 +30,7 @@ const {
 } = Astro.props as Props;
 ---
 
-<html lang="en" data-theme="dark" class="dark">
+<html lang="zh-CN" data-theme="dark" class="dark">
 	<head>
 		<BaseHead title={title} description={description} image={heroImage} />
 		<meta property="og:type" content="article" />
@@ -195,7 +195,7 @@ const {
 									<FormattedDate date={pubDate} />
 									{updatedDate && (
 										<div class="last-updated-on">
-											Last updated on{" "}
+											最后更新于{" "}
 											<FormattedDate date={updatedDate} />
 										</div>
 									)}

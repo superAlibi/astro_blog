@@ -34,7 +34,8 @@ export function calculateReadingTimeFromMarkdown(markdown: string, wordsPerMinut
     .replace(/\s+/g, ' ')
     .trim();
 
-  const wordMatches = text.match(/[A-Za-zÀ-ÖØ-öø-ÿ0-9]+/g);
+  // 支持中英文、数字等词数统计
+  const wordMatches = text.match(/[\p{L}\p{N}]+/gu); // \p{L}为所有Unicode字母，\p{N}为所有数字
   const words = wordMatches ? wordMatches.length : 0;
   return Math.max(1, Math.ceil(words / wordsPerMinute));
 }
