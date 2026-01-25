@@ -1,7 +1,8 @@
 ---
 title: 'Stream 与音频播放技术'
 description: '使用异步请求加载流式数据，实现边加载边播放的功能，涉及 Stream API、Fetch API 和 Media Source Extensions API'
-pubDate: '2024-01-01'
+pubDate: '2025/8/31 19:54:50'
+updatedDate: '2025-11-24 21:02:08'
 outline: [2,4]
 ---
 
@@ -118,7 +119,6 @@ audio.src = URL.createObjectURL(mediaSource);
 在为源头添加数据前，需要等待 `MediaSource` 准备完毕才行。通过 MediaSource 触发的 `sourceopen` 事件，便能知晓 MediaSource 已经准备完毕。
 
 ```typescript
-
 mediaSource.addEventListener("sourceopen", async () => {
   console.log(
     "mediaSourceManager 已准备好接收数据",

@@ -1,11 +1,10 @@
 ---
 title: 'Gradle 初体验'
 description: 'Gradle 是现代程序工程不可或缺的构建工具，支持 Java、Kotlin、Android 等多种编程语言的构建'
-pubDate: '2024-01-01'
-outline: [2,3]
+pubDate: '2025/8/16 23:21:23'
+updatedDate: '2025/8/24 20:19:53'
 ---
 
-# Gradle 初体验
 
 最近心血来潮，想学习一下 Kotlin，但是又不想使用 IDEA。经 AI 一搜索，发现可以使用 Gradle 快速启动一个 Kotlin 项目。因此自然地看了一下 Gradle 的文档：“构建工具是现代程序工程不可或缺的一环”。发现其文档逻辑思路和导航非常清晰且友好，便对 Gradle 这个构建工具产生了兴趣。
 

@@ -1,7 +1,8 @@
 ---
 title: 'firewalld 概述'
 description: 'firewalld 是一款防火墙前端工具，简化防火墙规则的编写，背后支撑其实现的是 Linux 系统内核中的第四代防火墙 netfilter'
-pubDate: '2024-01-01'
+pubDate: '2026/1/2 17:27:37'
+updatedDate: '2026-1-8 19:23:20'
 heroImage: '../../../assets/blog-firewalld.png'
 ---
 # firewalld 概述

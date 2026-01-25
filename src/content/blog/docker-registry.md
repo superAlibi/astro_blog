@@ -1,8 +1,7 @@
 ---
 title: 'Podman + Docker Registry + NPM 配置指南'
 description: '自建镜像仓库中心所遇到的问题总结，包括 Podman、Docker Registry 和 Nginx Proxy Manager 的配置'
-pubDate: '2024-01-01'
-outline: [3,4]
+pubDate: '2025/10/5 18:07:11'
 ---
 
 本文为自建镜像仓库中心所遇到的问题点, 由ai负责总结/输出的. 

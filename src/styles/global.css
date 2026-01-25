@@ -96,9 +96,11 @@ code {
 }
 
 pre {
-	padding: 1.5em;
+	padding: 1em;
 	border-radius: 8px;
+	margin-block: 1em;
 }
+
 
 pre>code {
 	all: unset;

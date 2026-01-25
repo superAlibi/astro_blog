@@ -1,7 +1,8 @@
 ---
 title: '安装 PostgreSQL'
 description: '在 Linux 上安装和配置 PostgreSQL 数据库，包括 Fedora 发行版的安装步骤和配置说明'
-pubDate: '2024-01-01'
+pubDate: '2025/3/18 16:03:39'
+updatedDate: '2025/3/23 17:15:50'
 ---
 # 安装postgresql
 
