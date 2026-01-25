@@ -1,17 +1,17 @@
-/* Base design tokens and defaults. These map to Starwind's inline theme variables. */
+/* 基础设计令牌与默认值。映射到 Starwind 的内联主题变量。 */
 :root {
-  /* Brand */
+  /* 品牌 */
   --accent: #FF8A4C;
   --accent-dark: #F97316;
   --accent-rgb: 255, 138, 76;
 
-  /* Neutrals (light baseline; dark overrides live in themes/dark.css) */
+  /* 中性色（浅色基线；深色覆盖在 themes/dark.css） */
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
 
-  /* Shadows */
+  /* 阴影 */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.12);
@@ -23,7 +23,7 @@
     0 8px 24px rgba(0, 0, 0, 0.12),
     0 16px 32px rgba(0, 0, 0, 0.12);
 
-  /* Map to Starwind token variables via inline @theme in starwind.css */
+  /* 通过 starwind.css 中的内联 @theme 映射到 Starwind 令牌变量 */
   --background: #ffffff;
   --foreground: #0f1219;
   --card: #ffffff;

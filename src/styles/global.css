@@ -1,10 +1,10 @@
-/* Load Starwind core first so our tokens can override its CSS variables */
+/* 先加载 Starwind 核心，使我们的令牌可覆盖其 CSS 变量 */
 @import "./starwind.css";
-/* Design tokens and theme overrides */
+/* 设计令牌与主题覆盖 */
 @import "./tokens.css";
 @import "./themes/dark.css";
 @import "./themes/light.css";
-/* Project-specific utilities */
+/* 项目专用工具类 */
 @import "./utilities.css";
 
 
@@ -34,8 +34,8 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
-/* Default main layout for legacy pages.
-   Pages that manage layout with utility classes should add class `use-utility-layout` to <main> to opt out. */
+/* 旧页面的默认主布局。
+   使用工具类管理布局的页面应在 <main> 上添加类 `use-utility-layout` 以退出。 */
 main:not(.use-utility-layout) {
     width: 1280px;
     max-width: calc(100% - 2em);
@@ -140,12 +140,12 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+	/* IE6、IE7：0 高度裁剪，偏移到可见 1px 盒子的右下 */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
+	/* 可能已弃用，但需要支持旧版浏览器 */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
+	/* 现代浏览器：clip-path 从四角向内生效 */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+	/* 额外一行防止文字挤在一起（换行时部分读屏器不把换行当空格） */
 	white-space: nowrap;
 }

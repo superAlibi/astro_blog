@@ -1,19 +1,19 @@
-/* Dark theme tokens. Applied when an ancestor sets [data-theme="dark"] or .dark */
+/* 深色主题令牌。当祖先元素设置 [data-theme="dark"] 或 .dark 时生效 */
 [data-theme="dark"],
 .dark {
-  /* Primary Brand Colors (Flowing Orange) */
+  /* 主品牌色（流动橙） */
   --accent: #FF8A4C;
   --accent-dark: #F97316;
   --accent-rgb: 255, 138, 76;
 
-  /* Neutral Colors */
+  /* 中性色 */
   --black: 255, 255, 255;
   --gray: 171, 178, 191;
   --gray-light: 40, 44, 52;
   --gray-dark: 220, 223, 228;
   --background: #050505;
 
-  /* Semantic Color Tokens */
+  /* 语义颜色令牌 */
   --color-text-primary: rgb(var(--black));
   --color-text-secondary: rgb(var(--gray-dark));
   --color-text-muted: rgb(var(--gray));
@@ -25,28 +25,28 @@
   --color-accent-text: var(--accent);
   --color-accent-bg: rgba(var(--accent), 0.15);
 
-  /* Translucent surfaces */
+  /* 半透明表面 */
   --surface-100: rgba(255, 255, 255, 0.05);
   --surface-200: rgba(255, 255, 255, 0.08);
   --surface-300: rgba(255, 255, 255, 0.12);
 
-  /* Shadows (heavier for dark mode) */
+  /* 阴影（深色模式更重） */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
   --shadow-md: 0 6px 14px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.35);
   --shadow-xl: 0 18px 44px rgba(0, 0, 0, 0.42);
   --shadow-2xl: 0 30px 80px rgba(0, 0, 0, 0.5);
 
-  /* Component Specific Shadows */
+  /* 组件专用阴影 */
   --box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.4),
     0 8px 24px rgba(0, 0, 0, 0.2),
     0 16px 32px rgba(0, 0, 0, 0.2);
 
-  /* Map to Starwind token variables */
+  /* 映射到 Starwind 令牌变量 */
   --background: #1E1E1E;
   --foreground: rgb(243, 244, 246);
-  /* Translucent card surface on dark bg */
+  /* 深色背景上的半透明卡片表面 */
   --card: rgba(255, 255, 255, 0.04);
   --card-foreground: rgb(243, 244, 246);
   --popover: #282c34;
@@ -58,7 +58,7 @@
   --muted: rgba(255, 255, 255, 0.06);
   --muted-foreground: rgb(171, 178, 191);
   --accent-foreground: #0f1219;
-  /* Semantic colors from old project */
+  /* 来自旧项目的语义色 */
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
@@ -67,10 +67,8 @@
   --success-foreground: #052e16;
   --warning-foreground: #451a03;
   --error-foreground: #ffffff;
-  /* Slightly softer borders on translucent surfaces */
+  /* 半透明表面上更柔和的边框 */
   --border: var(--surface-300);
   --input: var(--surface-300);
   --outline: #F97316;
 }
-
-

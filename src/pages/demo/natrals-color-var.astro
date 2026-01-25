@@ -1,0 +1,31 @@
+---
+import BlogPostLayout from "@/layouts/BlogLayout.astro";
+---
+
+<BlogPostLayout title="Natrals Color Var" description="Natrals Color Var">
+  
+  <div class="test-dark test-text">
+    <span>Natrals Color Dark</span>
+  </div>
+  <div class="test-light test-text">
+    <span>Natrals Color Light</span>
+  </div>
+</BlogPostLayout>
+
+<style is:inline>
+  :root {
+    color-scheme: dark light;
+    --vvk: light-dark(rgb(0 0 0), rgb(255 255 255));
+    
+  }
+  .test-dark {
+    color-scheme: dark;
+    background-color: black;
+  }
+  .test-light {
+    color-scheme: light;
+  }
+  .test-text {
+    color: var(--vvk);
+  }
+</style>

@@ -1,6 +1,6 @@
-/* Light theme tokens. Applied when an ancestor sets [data-theme="light"] (default) */
+/* 浅色主题令牌。当祖先元素设置 [data-theme="light"]（默认）时生效 */
 [data-theme="light"] {
-  --accent: #FF7A1A; /* brighter for light */
+  --accent: #FF7A1A; /* 浅色更亮 */
   --accent-dark: #EA580C;
   --accent-rgb: 255, 122, 26;
 
@@ -23,7 +23,7 @@
   --muted-foreground: rgb(96, 115, 159);
   --accent-foreground: #0f1219;
 
-  /* Semantic Color Tokens for components */
+  /* 组件用语义颜色令牌 */
   --color-text-primary: rgb(var(--black));
   --color-text-secondary: rgb(var(--gray-dark));
   --color-text-muted: rgb(var(--gray));
@@ -31,7 +31,7 @@
   --color-bg-secondary: rgba(0, 0, 0, 0.03);
   --color-bg-tertiary: rgba(0, 0, 0, 0.05);
 
-  /* Borders */
+  /* 边框 */
   --color-border: rgba(0, 0, 0, 0.12);
   --color-border-light: rgba(0, 0, 0, 0.08);
 

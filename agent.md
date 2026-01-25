@@ -61,3 +61,48 @@
 - 所有渐变相关的类名都需要使用 `bg-linear-to-*` 而不是 `bg-gradient-to-*`
 - 自定义动画和样式应放在 `@layer utilities` 中
 - 确保代码通过 Tailwind CSS 4 的 lint 检查
+
+## 主题系统与设计令牌（:root 为唯一来源）
+
+### 核心原则
+
+- 设计令牌只存在于原生 `:root` CSS 变量中，作为唯一来源。
+- Tailwind 仅消费语义变量，不定义颜色来源，方便未来替换 Tailwind。
+- 颜色空间统一使用 `oklch()`；主题切换优先 `light-dark()`。
+- 弱化边框/背景/状态色使用 `color-mix()` 或 `oklch(... / alpha)`。
+
+### 现有结构（当前项目）
+
+- 设计令牌：`src/styles/tokens.css`
+- 主题变量：`src/styles/themes/light.css`、`src/styles/themes/dark.css`
+- Tailwind 映射：`src/styles/starwind.css`（`@theme inline` 只做变量映射）
+
+### 迁移清单（Tailwind 仅消费变量）
+
+- `tokens.css` 仅保留基础色/尺度（品牌色、中性色、阴影等），不做语义判断。
+- 主题语义变量集中到 `themes/*.css` 或单独 `theme.css`，使用 `light-dark()` 输出最终颜色。
+- 所有语义颜色统一用 `--color-*` 命名，能直接被 CSS 或 Tailwind 使用。
+- Tailwind 层只引用 `var(--color-*)`，不直接出现 `oklch()` 或 `color-mix()`。
+
+### 变量命名建议
+
+- 基础色令牌：`--brand-*`、`--neutral-*`
+- 语义色令牌：`--color-text-*`、`--color-bg-*`、`--color-border-*`
+
+### Tailwind 消费示例（仅消费语义变量）
+
+在 `src/styles/starwind.css` 的 `@theme inline` 中仅映射变量：
+
+```css
+@theme inline {
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-primary);
+  --color-border: var(--color-border);
+}
+```
+
+在组件中只使用 Tailwind 语义色，不直接写 `oklch()`：
+
+```html
+<div class="bg-background text-foreground border-border"></div>
+```

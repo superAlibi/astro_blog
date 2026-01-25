@@ -1,4 +1,4 @@
-/* Project-specific small utilities */
+/* 项目专用小工具类 */
 .container-prose {
   max-width: 72ch;
 }
@@ -15,7 +15,7 @@
 
 .card-surface:hover { box-shadow: var(--shadow-lg); }
 
-/* Dark theme: stronger base shadow, lighter on hover with accent glow */
+/* 深色主题：基础阴影更重，悬停更轻并带强调光晕 */
 .dark .card-surface,
 [data-theme="dark"] .card-surface {
   box-shadow:
@@ -34,7 +34,7 @@
 .elevate-xl { box-shadow: var(--shadow-xl); }
 .elevate-2xl { box-shadow: var(--shadow-2xl); }
 
-/* Carousel animation utility */
+/* 轮播动画工具 */
 @keyframes carousel-scroll {
   0% { transform: translateX(-20%); }
   100% { transform: translateX(-70%); }
@@ -44,7 +44,7 @@
   animation: carousel-scroll 120s linear infinite;
 }
 
-/* Separators */
+/* 分隔线 */
 .sw-separator-arrow {
   display: flex;
   width: 100%;
@@ -79,11 +79,11 @@
   border-radius: 999px;
 }
 
-/* Header hover color should be accent, not hardcoded white */
+/* 头部悬停颜色应为强调色，而非硬编码白色 */
 .sw-header .internal-links a:hover { color: var(--accent) !important; }
 .sw-header .group:hover { color: var(--accent); }
 
-/* Blog utilities */
+/* 博客工具类 */
 .blog-prose { width: calc(100% - 2em); max-width: 860px; margin: 0 auto; padding: 1.25em; }
 .sw-share-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; color: var(--accent); transition: transform .15s ease, color .15s ease; }
 .sw-share-btn:hover { transform: translateY(-1px); color: var(--accent-dark); }
@@ -91,10 +91,10 @@
 .sw-share-btn svg :not([fill="none"]) { fill: currentColor !important; }
 .sw-share-btn svg [stroke] { stroke: currentColor !important; }
 
-/* Markdown table styling (applies inside .prose blocks used in blog posts) */
+/* Markdown 表格样式（用于博客文章中的 .prose 块） */
 .prose table {
-  width: auto;               /* shrink to content */
-  max-width: 100%;           /* but never exceed container */
+  width: auto;               /* 缩到内容宽度 */
+  max-width: 100%;           /* 但不超过容器 */
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--color-border-light);
@@ -114,14 +114,14 @@
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--color-border-light);
   vertical-align: top;
-  white-space: normal;       /* allow wrapping to avoid huge empty areas */
+  white-space: normal;       /* 允许换行，避免大面积空白 */
 }
 
-/* Keep inline code compact inside table cells */
+/* 表格单元格内的行内代码保持紧凑 */
 .prose td code,
 .prose th code { white-space: nowrap; }
 
-/* Markdown list styling (tailwind preflight removes bullets by default) */
+/* Markdown 列表样式（tailwind preflight 默认移除圆点） */
 .prose ul {
   list-style: disc;
   padding-left: 1.5rem;
@@ -159,7 +159,7 @@
   .sw-post-nav .sw-nav-btn { min-height: 64px; }
 }
 
-/* Blog index helpers */
+/* 博客索引辅助 */
 .blog-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1.25rem; align-items: stretch; }
 @media (min-width: 768px) { .blog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .sw-btn { padding: .625rem 1rem; border-radius: 10px; background: var(--color-bg-secondary); color: var(--color-text-primary); border: 1px solid var(--color-border-light); }
@@ -167,27 +167,27 @@
 .sw-btn-sm { padding: .375rem .625rem; border-radius: 8px; font-size: 12px; line-height: 1; background: var(--color-bg-secondary); color: var(--color-text-primary); border: 1px solid var(--color-border-light); }
 .sw-btn-sm:hover { color: var(--accent); border-color: var(--accent); }
 
-/* Subtle hover lift for cards */
+/* 卡片的轻微悬浮上移 */
 .hover-lift { transition: transform .18s ease, box-shadow .18s ease; }
 .hover-lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
-/* Featured card tweaks */
+/* 特色卡片微调 */
 .sw-featured-card img { border-radius: 12px; }
 .sw-featured-card:hover img { filter: brightness(1.02) saturate(1.02); }
 
-/* Stretched link utility for clickable cards */
+/* 可点击卡片的拉伸链接工具 */
 .stretched-link {
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-/* Keep inner interactive elements above stretched link */
+/* 让内部交互元素位于拉伸链接上方 */
 .interactive-link { position: relative; z-index: 2; }
 .interactive-link:not(.sw-tag):not(.sw-btn):not(.sw-btn-sm) { text-decoration: underline; text-underline-offset: 2px; }
 .interactive-link:not(.sw-tag):not(.sw-btn):not(.sw-btn-sm):hover { text-decoration-thickness: 2px; }
 
-/* Compact tag badge */
+/* 紧凑标签徽章 */
 .sw-tag {
   display: inline-flex;
   align-items: center;
@@ -201,11 +201,11 @@
 }
 .sw-tag:hover { color: var(--accent); }
 
-/* Featured image min-height */
+/* 特色图片最小高度 */
 .min-h-featured { min-height: 200px; }
 @media (min-width: 768px) { .min-h-featured { min-height: 200px; } }
 
-/* Header link colors (restore original subtle default, accent on hover) */
+/* 头部链接颜色（恢复原本的低调默认，悬停为强调色） */
 .sw-header .internal-links a {
   color: var(--color-text-secondary);
   text-decoration: none;

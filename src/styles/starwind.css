@@ -136,7 +136,7 @@
 }
 
 @layer utilities {
-	/* transition-colors but without outline-color transition property */
+	/* transition-colors，但不包含 outline-color 的过渡属性 */
 	.starwind-transition-colors {
 		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
 			--tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
