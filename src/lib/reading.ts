@@ -1,4 +1,4 @@
-export function calculateReadingTimeFromHtml(html: string, wordsPerMinute = 200): number {
+export function calculateReadingTimeFromHtml(html: string, charactersPerMinute = 300): number {
   if (!html) return 1;
   const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
@@ -7,8 +7,9 @@ export function calculateReadingTimeFromHtml(html: string, wordsPerMinute = 200)
     .replace(/&[a-zA-Z#0-9]+;/g, ' ') // entities
     .replace(/\s+/g, ' ') // collapse whitespace
     .trim();
-  const words = text ? text.split(' ').length : 0;
-  return Math.max(1, Math.ceil(words / wordsPerMinute));
+  // 统计所有非空白字符（支持中文字符）
+  const characters = text ? text.replace(/\s/g, '').length : 0;
+  return Math.max(1, Math.ceil(characters / charactersPerMinute));
 }
 
 export function calculateReadingTimeFromMarkdown(markdown: string, wordsPerMinute = 200): number {

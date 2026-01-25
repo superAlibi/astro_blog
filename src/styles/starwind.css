@@ -41,6 +41,7 @@
 	--color-muted: var(--muted);
 	--color-muted-foreground: var(--muted-foreground);
 	--color-accent: var(--accent);
+	--color-accent-dark: var(--accent-dark);
 	--color-accent-foreground: var(--accent-foreground);
 	--color-info: var(--info);
 	--color-info-foreground: var(--info-foreground);

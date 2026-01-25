@@ -13,7 +13,6 @@ FNM 是 [Fast Node Manager](https://github.com/Schniz/fnm) 的缩写，是一个
 
 我之所以单独写一篇文章，是因为某些常见的配置记不住，在需要的时候能找到属于自己的文档，仅此而已。
 
-[[toc]]
 
 ## 本文撰文环境
 

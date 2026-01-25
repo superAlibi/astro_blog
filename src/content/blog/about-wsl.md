@@ -3,7 +3,6 @@ title: 'Windows Subsystem for Linux (WSL)'
 description: 'WSL 成为我开发过程中不可或缺的一部分，本文介绍 WSL 的安装、配置和使用经验'
 pubDate: '2024-01-01'
 ---
-# Windows Subsystem for Linux (WSL)
 
 我所工作过的公司大部分开发者都是使用 Windows，仅仅遇到过两个不用 Windows 开发的，一个使用 Arch Linux 的衍生版，一个使用 Mac 小主机 :)
 
@@ -12,7 +11,6 @@ pubDate: '2024-01-01'
 
 WSL 成为我开发过程中不可或缺的一部分。
 
-[[toc]]
 
 ## 本文撰文环境
 
@@ -219,6 +217,7 @@ Deno 使用 Rust 构建，内置 TypeScript 支持，能直接运行 TS 程序�
 ```powershell
 Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -DefaultInboundAction Allow
 ```
+<br/>
 
 ## 五. 在使用过程中遇到的坑
 

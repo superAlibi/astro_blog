@@ -15,11 +15,11 @@ export default defineConfig({
   markdown: {
 
     shikiConfig: {
-      // theme: 'dracula',
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
+      theme: 'dracula',
+      // themes: {
+      //   light: 'github-light',
+      //   dark: 'github-dark',
+      // },
     },
 
   },

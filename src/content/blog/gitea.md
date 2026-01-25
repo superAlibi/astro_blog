@@ -4,7 +4,6 @@ description: '轻量化的 Git 仓库管理工具 Gitea，相比 GitLab 占用�
 pubDate: '2024-01-01'
 outline: [2,3]
 ---
-# 关于 Gitea 二三事
 
 为什么想要自己搭建一个私人仓库，而不是使用 GitHub、GitLab、码云这些已有的公认仓库呢？
 
@@ -27,7 +26,6 @@ outline: [2,3]
 
 目前来说，我更喜欢麻雀虽小，五脏俱全的 Gitea，而不是功能繁多庞大的 GitLab。
 
-[[toc]]
 
 ## 说明
 

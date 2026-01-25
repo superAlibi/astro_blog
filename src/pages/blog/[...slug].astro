@@ -28,3 +28,32 @@ const readingTimeMin = calculateReadingTimeFromHtml(html ?? '');
 <BlogPost {...post.data} prevPost={prev} nextPost={next} readingTimeMin={readingTimeMin}>
   <Content />
 </BlogPost>
+<style is:inline>
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	/* color: rgb(var(--black)); */
+	line-height: 1.2;
+}
+h1 {
+    font-size: 2.75em;
+}
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.4em;
+}
+h5 {
+    font-size: 1.125em;
+}
+
+</style>
