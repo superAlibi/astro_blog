@@ -11,7 +11,8 @@
 - [TCP/IP 详解 - 卷一：协议](/blog/comput-tcpip-protocols)
 - [monorepo 仓库与前端共享工程](/blog/monorepo)
 - [Podman + Docker Registry + NPM 配置指南](/blog/docker-registry)
-- sso 与 oauth
+- [sso 与 oauth](/blog/type-base-http-server)
+- [类型优先的web服务器选型](/blog/type-base-http-server)
 - [低代码/无代码浅谈](/blog/lowcode)
 - 个人聊天助手的设计(基于 ~dify~ n8n )
 - web可访问性与渐进式体验概述
