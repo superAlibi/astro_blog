@@ -23,7 +23,7 @@ const { category } = Astro.params;
 const posts = (await getCollection('blog')).filter((p) => slugifyCategory(p.data.category || '') === category);
 const meta = getCategoryMeta(category);
 ---
-<html lang="en" data-theme="dark" class="dark">
+<html lang="en" data-theme="dark">
   <head>
     <BaseHead title={`${meta.title} - Category`} description={meta.description} />
     <link rel="alternate" type="application/rss+xml" title={`Category: ${category} feed`} href={`/rss/category/${category}.xml`} />

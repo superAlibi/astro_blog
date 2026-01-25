@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/forms";
-@variant dark (&:where(.dark, .dark *));
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
 	--animate-accordion-down: accordion-down 0.2s ease-out;
@@ -35,6 +35,7 @@
 	--color-popover-foreground: var(--popover-foreground);
 	--color-primary: var(--primary);
 	--color-primary-foreground: var(--primary-foreground);
+	--color-text-primary: var(--foreground);
 	--color-secondary: var(--secondary);
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-muted: var(--muted);
@@ -49,9 +50,19 @@
 	--color-warning-foreground: var(--warning-foreground);
 	--color-error: var(--error);
 	--color-error-foreground: var(--error-foreground);
-	--color-border: var(--border);
 	--color-input: var(--input);
 	--color-outline: var(--outline);
+
+	/* 组件语义 */
+	--color-text-secondary: var(--color-text-secondary);
+	--color-text-muted: var(--color-text-muted);
+	--color-bg-primary: var(--color-bg-primary);
+	--color-bg-secondary: var(--color-bg-secondary);
+	--color-bg-tertiary: var(--color-bg-tertiary);
+	--color-border: var(--color-border);
+	--color-border-light: var(--color-border-light);
+	--color-accent-text: var(--color-accent-text);
+	--color-accent-bg: var(--color-accent-bg);
 
 	--radius-xs: calc(var(--radius) - 0.375rem);
 	--radius-sm: calc(var(--radius) - 0.25rem);
@@ -63,64 +74,6 @@
 }
 
 @layer base {
-	:root {
-		--background: var(--color-neutral-50);
-		--foreground: var(--color-neutral-950);
-		--card: var(--color-neutral-50);
-		--card-foreground: var(--color-neutral-950);
-		--popover: var(--color-neutral-50);
-		--popover-foreground: var(--color-neutral-950);
-		--primary: var(--color-blue-700);
-		--primary-foreground: var(--color-neutral-50);
-		--secondary: var(--color-fuchsia-700);
-		--secondary-foreground: var(--color-neutral-50);
-		--muted: var(--color-neutral-100);
-		--muted-foreground: var(--color-neutral-600);
-		--accent: var(--color-neutral-200);
-		--accent-foreground: var(--color-neutral-900);
-		--info: var(--color-sky-300);
-		--info-foreground: var(--color-sky-950);
-		--success: var(--color-green-300);
-		--success-foreground: var(--color-green-950);
-		--warning: var(--color-amber-300);
-		--warning-foreground: var(--color-amber-950);
-		--error: var(--color-red-700);
-		--error-foreground: var(--color-neutral-50);
-		--border: var(--color-neutral-200);
-		--input: var(--color-neutral-200);
-		--outline: var(--color-blue-600);
-		--radius: 0.5rem;
-	}
-
-	.dark {
-		--background: var(--color-neutral-950);
-		--foreground: var(--color-neutral-50);
-		--card: var(--color-neutral-950);
-		--card-foreground: var(--color-neutral-50);
-		--popover: var(--color-neutral-950);
-		--popover-foreground: var(--color-neutral-50);
-		--primary: var(--color-blue-700);
-		--primary-foreground: var(--color-neutral-50);
-		--secondary: var(--color-fuchsia-300);
-		--secondary-foreground: var(--color-neutral-950);
-		--muted: var(--color-neutral-900);
-		--muted-foreground: var(--color-neutral-400);
-		--accent: var(--color-neutral-900);
-		--accent-foreground: var(--color-neutral-100);
-		--info: var(--color-sky-300);
-		--info-foreground: var(--color-sky-950);
-		--success: var(--color-green-300);
-		--success-foreground: var(--color-green-950);
-		--warning: var(--color-amber-300);
-		--warning-foreground: var(--color-amber-950);
-		--error: var(--color-red-800);
-		--error-foreground: var(--color-neutral-50);
-		--border: var(--color-neutral-800);
-		--input: var(--color-neutral-800);
-		--outline: var(--color-blue-600);
-		--radius: 0.5rem;
-	}
-
 	* {
 		@apply border-border;
 	}
@@ -128,7 +81,7 @@
 		@apply outline-outline;
 	}
 	html {
-		@apply bg-background text-foreground scheme-light dark:scheme-dark;
+		@apply bg-background text-foreground;
 	}
 	button {
 		@apply cursor-pointer;

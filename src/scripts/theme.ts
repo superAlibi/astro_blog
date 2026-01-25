@@ -45,12 +45,10 @@ function setTheme(theme: Theme) {
 	if (theme === 'system') {
 		const systemTheme = getSystemTheme();
 		root.setAttribute(THEME_ATTRIBUTE, systemTheme);
-		root.classList.remove('light', 'dark');
-		root.classList.add(systemTheme);
+		root.style.colorScheme = systemTheme;
 	} else {
 		root.setAttribute(THEME_ATTRIBUTE, theme);
-		root.classList.remove('light', 'dark', 'system');
-		root.classList.add(theme);
+		root.style.colorScheme = theme;
 	}
 
 	// 触发自定义事件，通知其他组件

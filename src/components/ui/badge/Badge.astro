@@ -17,7 +17,7 @@ const colorByVariant: Record<string, string> = {
   success: 'bg-[var(--success)] text-[var(--success-foreground)] border border-[var(--success)]',
   warning: 'bg-[var(--warning)] text-[var(--warning-foreground)] border border-[var(--warning)]',
   error: 'bg-[var(--error)] text-[var(--error-foreground)] border border-[var(--error)]',
-  outline: 'bg-transparent text-[color:var(--color-text-secondary)] border border-[var(--border)]',
+  outline: 'bg-transparent text-muted-foreground border border-[var(--border)]',
 };
 
 const classes = [base, paddings, colorByVariant[variant], className].filter(Boolean).join(' ');

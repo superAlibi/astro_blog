@@ -39,7 +39,7 @@ const posts = await getCollection('blog');
 const [firstPost, secondPost, thirdPost] = posts.slice(0, 3);
 ---
 
-<html lang="en" data-theme="dark" class="dark">
+<html lang="en" data-theme="dark">
   <head>
     <BaseHead title={pageTitle} description={pageDescription} />
   </head>
@@ -103,7 +103,7 @@ const [firstPost, secondPost, thirdPost] = posts.slice(0, 3);
         <Card>
           <div class="p-4 space-y-2">
             <h3 class="text-xl font-semibold">Surface card</h3>
-            <p class="text-[color:var(--color-text-secondary)]">Uses Starwind CSS vars mapped to our tokens.</p>
+            <p class="text-muted-foreground">Uses Starwind CSS vars mapped to our tokens.</p>
           </div>
         </Card>
       </section>

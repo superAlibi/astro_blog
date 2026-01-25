@@ -1,52 +1,31 @@
-/* 基础设计令牌与默认值。映射到 Starwind 的内联主题变量。 */
+/* 基础设计令牌（仅基础色与尺度）。 */
 :root {
-  /* 品牌 */
-  --accent: #FF8A4C;
-  --accent-dark: #F97316;
-  --accent-rgb: 255, 138, 76;
+  /* 品牌色 */
+  --brand-300: oklch(from #FFB36B l c h);
+  --brand-400: oklch(from #FF7A1A l c h);
+  --brand-500: oklch(from #FF8A4C l c h);
+  --brand-600: oklch(from #F97316 l c h);
 
-  /* 中性色（浅色基线；深色覆盖在 themes/dark.css） */
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
+  /* 中性色 */
+  --neutral-0: oklch(from #ffffff l c h);
+  --neutral-50: oklch(from #f6f7f9 l c h);
+  --neutral-100: oklch(from #e5e9f0 l c h);
+  --neutral-300: oklch(from #abb2bf l c h);
+  --neutral-400: oklch(from #dcdfe4 l c h);
+  --neutral-600: oklch(from #60739f l c h);
+  --neutral-800: oklch(from #222939 l c h);
+  --neutral-850: oklch(from #282c34 l c h);
+  --neutral-900: oklch(from #0f1219 l c h);
+  --neutral-950: oklch(from #050505 l c h);
 
-  /* 阴影 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 12px 25px rgba(0, 0, 0, 0.16);
-  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.2);
+  /* 状态色 */
+  --info-400: oklch(from #38bdf8 l c h);
+  --info-500: oklch(from #3b82f6 l c h);
+  --success-400: oklch(from #22c55e l c h);
+  --success-500: oklch(from #10b981 l c h);
+  --warning-400: oklch(from #f59e0b l c h);
+  --error-500: oklch(from #ef4444 l c h);
 
-  --box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.12),
-    0 8px 24px rgba(0, 0, 0, 0.12),
-    0 16px 32px rgba(0, 0, 0, 0.12);
-
-  /* 通过 starwind.css 中的内联 @theme 映射到 Starwind 令牌变量 */
-  --background: #ffffff;
-  --foreground: #0f1219;
-  --card: #ffffff;
-  --card-foreground: #0f1219;
-  --popover: #ffffff;
-  --popover-foreground: #0f1219;
-  --primary: var(--accent);
-  --primary-foreground: #ffffff;
-  --secondary: #FFB36B;
-  --secondary-foreground: #0f1219;
-  --muted: rgb(246, 247, 249);
-  --muted-foreground: rgb(96, 115, 159);
-  --accent-foreground: #0f1219;
-  --info: #7dd3fc;
-  --info-foreground: #082f49;
-  --success: #86efac;
-  --success-foreground: #052e16;
-  --warning: #fcd34d;
-  --warning-foreground: #451a03;
-  --error: #ef4444;
-  --error-foreground: #ffffff;
-  --border: rgb(229, 233, 240);
-  --input: rgb(229, 233, 240);
-  --outline: var(--accent);
+  /* 尺度 */
   --radius: 0.75rem;
 }

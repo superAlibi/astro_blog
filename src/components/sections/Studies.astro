@@ -24,12 +24,12 @@ const { items, title } = Astro.props as Props;
       {items.map((study) => (
         <article class="card-surface p-6">
           <h3 class="text-xl font-semibold text-foreground">{study.title}</h3>
-          <div class="mt-1 text-sm text-[color:var(--color-text-secondary)]">{study.institution}</div>
-          <p class="mt-3 text-[color:var(--color-text-secondary)]">{study.description}</p>
+          <div class="mt-1 text-sm text-muted-foreground">{study.institution}</div>
+          <p class="mt-3 text-muted-foreground">{study.description}</p>
           {study.tags && study.tags.length > 0 && (
             <div class="mt-4 flex flex-wrap gap-2">
               {study.tags.map((tag) => (
-                <span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium" style="background: rgba(var(--accent-rgb),0.1); color: var(--accent); border: 1px solid rgba(var(--accent-rgb),0.3);">
+                <span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium" style="background: color-mix(in oklch, var(--accent) 10%, transparent); color: var(--accent); border: 1px solid color-mix(in oklch, var(--accent) 30%, transparent);">
                   {tag}
                 </span>
               ))}

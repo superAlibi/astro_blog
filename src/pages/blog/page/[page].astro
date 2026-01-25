@@ -24,7 +24,7 @@ const pagePosts = posts.slice(start, end);
 const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
 ---
 
-<html lang="en" data-theme="dark" class="dark">
+<html lang="en" data-theme="dark">
   <head>
     <BaseHead title={`Blog - Page ${currentPage}`} description={`Blog page ${currentPage}`} />
     {currentPage > 1 && (

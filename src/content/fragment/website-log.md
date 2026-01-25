@@ -3,6 +3,10 @@
 
 ## 站点日志
 
+### 2026年1月25日
+
+完成主题系统重构，改为以 `:root` CSS 变量为唯一设计令牌源，并使用 `oklch()`、`color-mix()` 与 `light-dark()` 统一表达色彩。Tailwind 仅消费语义变量，后续替换工具层无需回改 design tokens。
+
 ### 2026年1月10日
 
 将站点从 vitepress 切换为了 astro.

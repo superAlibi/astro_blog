@@ -1,0 +1,104 @@
+/* 主题语义令牌（使用 light-dark + oklch） */
+:root {
+  /* 品牌 */
+  --accent: var(--brand-500);
+  --accent-dark: var(--brand-600);
+  --primary: var(--accent);
+  --primary-foreground: light-dark(var(--neutral-0), var(--neutral-900));
+  --secondary: var(--brand-300);
+  --secondary-foreground: light-dark(var(--neutral-900), var(--neutral-50));
+  --accent-foreground: light-dark(var(--neutral-900), var(--neutral-900));
+
+  /* 语义文本/背景 */
+  --foreground: light-dark(var(--neutral-900), var(--neutral-50));
+  --background: light-dark(var(--neutral-0), var(--neutral-950));
+  --card: light-dark(var(--neutral-0),
+      color-mix(in oklch, var(--neutral-0) 6%, transparent));
+  --card-foreground: var(--foreground);
+  --popover: light-dark(var(--neutral-0), var(--neutral-850));
+  --popover-foreground: var(--foreground);
+
+  --muted: light-dark(var(--neutral-50),
+      color-mix(in oklch, var(--neutral-0) 6%, transparent));
+  --muted-foreground: light-dark(var(--neutral-600), var(--neutral-300));
+
+  --border: light-dark(var(--neutral-100),
+      color-mix(in oklch, var(--neutral-0) 16%, transparent));
+  --input: var(--border);
+  --outline: var(--accent);
+
+  /* 组件语义 */
+  --color-text-primary: var(--foreground);
+  --color-text-secondary: light-dark(var(--neutral-800), var(--neutral-300));
+  --color-text-muted: light-dark(var(--neutral-600), var(--neutral-400));
+  --color-bg-primary: var(--background);
+  --color-bg-secondary: light-dark(color-mix(in oklch, var(--neutral-900) 3%, transparent),
+      color-mix(in oklch, var(--neutral-0) 6%, transparent));
+  --color-bg-tertiary: light-dark(color-mix(in oklch, var(--neutral-900) 5%, transparent),
+      color-mix(in oklch, var(--neutral-0) 10%, transparent));
+  --color-border: light-dark(color-mix(in oklch, var(--neutral-900) 12%, transparent),
+      color-mix(in oklch, var(--neutral-0) 20%, transparent));
+  --color-border-light: light-dark(color-mix(in oklch, var(--neutral-900) 8%, transparent),
+      color-mix(in oklch, var(--neutral-0) 12%, transparent));
+  --color-accent-text: var(--accent);
+  --color-accent-bg: light-dark(color-mix(in oklch, var(--accent) 12%, transparent),
+      color-mix(in oklch, var(--accent) 18%, transparent));
+
+  --surface-100: light-dark(color-mix(in oklch, var(--neutral-900) 2%, transparent),
+      color-mix(in oklch, var(--neutral-0) 6%, transparent));
+  --surface-200: light-dark(color-mix(in oklch, var(--neutral-900) 4%, transparent),
+      color-mix(in oklch, var(--neutral-0) 10%, transparent));
+  --surface-300: light-dark(color-mix(in oklch, var(--neutral-900) 6%, transparent),
+      color-mix(in oklch, var(--neutral-0) 14%, transparent));
+
+  /* 状态色 */
+  --info: light-dark(var(--info-400), var(--info-500));
+  --info-foreground: oklch(from #082f49 l c h);
+  --success: light-dark(var(--success-400), var(--success-500));
+  --success-foreground: oklch(from #052e16 l c h);
+  --warning: var(--warning-400);
+  --warning-foreground: oklch(from #451a03 l c h);
+  --error: var(--error-500);
+  --error-foreground: var(--neutral-0);
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px light-dark(color-mix(in oklch, black 8%, transparent),
+      color-mix(in oklch, black 30%, transparent));
+  --shadow-md: 0 4px 6px light-dark(color-mix(in oklch, black 10%, transparent),
+      color-mix(in oklch, black 38%, transparent));
+  --shadow-lg: 0 8px 15px light-dark(color-mix(in oklch, black 12%, transparent),
+      color-mix(in oklch, black 46%, transparent));
+  --shadow-xl: 0 12px 25px light-dark(color-mix(in oklch, black 16%, transparent),
+      color-mix(in oklch, black 54%, transparent));
+  --shadow-2xl: 0 25px 50px light-dark(color-mix(in oklch, black 20%, transparent),
+      color-mix(in oklch, black 62%, transparent));
+
+  --box-shadow:
+    0 2px 6px light-dark(color-mix(in oklch, black 12%, transparent),
+      color-mix(in oklch, black 45%, transparent)),
+    0 8px 24px light-dark(color-mix(in oklch, black 12%, transparent),
+      color-mix(in oklch, black 30%, transparent)),
+    0 16px 32px light-dark(color-mix(in oklch, black 12%, transparent),
+      color-mix(in oklch, black 30%, transparent));
+
+  --glow-accent: 0 0 18px color-mix(in oklch, var(--accent) 45%, transparent);
+
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+
+/* 浅色主题覆盖：仅控制 color-scheme，使 light-dark 生效 */
+[data-theme="light"],
+.light {
+  color-scheme: light;
+}
+
+
+/* 深色主题覆盖：仅控制 color-scheme，使 light-dark 生效 */
+[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+}

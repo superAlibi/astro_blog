@@ -20,7 +20,7 @@ const { title = "Blog", subtitle } = Astro.props as Props;
       </h1>
       {
         subtitle && (
-          <p class="text-base md:text-lg text-[color:var(--color-text-secondary)] md:text-right">
+          <p class="text-base md:text-lg text-muted-foreground md:text-right">
             {subtitle}
           </p>
         )

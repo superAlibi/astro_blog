@@ -30,7 +30,7 @@ const {
 } = Astro.props as Props;
 ---
 
-<html lang="zh-CN" data-theme="dark" class="dark">
+<html lang="zh-CN" data-theme="dark">
 	<head>
 		<BaseHead title={title} description={description} image={heroImage} />
 		<meta property="og:type" content="article" />
@@ -155,10 +155,6 @@ const {
 				text-align: center;
 				line-height: 1;
 			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-				color: var(--color-text-primary);
-			}
 			.date {
 				margin-bottom: 0.5em;
 				color: var(--color-text-muted);
@@ -200,7 +196,7 @@ const {
 										</div>
 									)}
 								</div>
-								<h1>{title}</h1>
+								<h1 class="text-3xl md:text-4xl font-bold text-text-primary m-0 mb-2">{title}</h1>
 								<hr />
 							</div>
 						)
